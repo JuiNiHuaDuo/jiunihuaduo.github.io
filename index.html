@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style id="style">
+        ul {
+            list-style: none;
+        }
+
+        #circle {
+            top: 200px;
+            left: 70px;
+            width: 200px;
+            height: 200px;
+            /* border-radius: 50px; */
+            border: 7px solid #000010;
+            position: relative;
+            background: rgba(0, 0, 0, .5);
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            /* color: #c38d9e; */
+            float: left;
+        }
+
+        #kedu li {
+            width: 1px;
+            height: 6px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, .5);
+            transform-origin: center 101px;
+            /*设置li标签的旋转中心和旋转半径。*/
+            position: absolute;
+            left: 99px;
+            top: -1px;
+        }
+
+        #kedu li:nth-of-type(5n+1) {
+            height: 12px;
+            width: 2px;
+        }
+
+        /* 秒针的绘制，用transform把div绘制成线条，后面的指针都是在这样。 */
+        #second {
+            width: 2px;
+            height: 80px;
+            background-color: rgba(0, 0, 0, .5);
+            transform: scaleY(1);
+            position: absolute;
+            left: 100px;
+            top: 21px;
+            transform-origin: bottom;
+            /*设置它们的旋转中心，transform-origin: bottom；意思是以它们的底部为中心旋转。*/
+        }
+
+        #min {
+            width: 2px;
+            height: 65px;
+            background-color:rgba(0, 0, 0, .5);
+            transform: scaleY(1);
+            position: absolute;
+            left: 100px;
+            top: 35px;
+            transform-origin: bottom;
+        }
+
+        #hour {
+            width: 2px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, .5);
+            transform: scaleY(1);
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            transform-origin: bottom;
+        }
+
+        #p12 {
+            position: absolute;
+            left: 91px;
+            top: 9px;
+        }
+
+        #p3 {
+            position: absolute;
+            right: 12px;
+            top: 89px;
+        }
+
+        #p6 {
+            position: absolute;
+            left: 95px;
+            bottom: 9px;
+        }
+
+        #p9 {
+            position: absolute;
+            left: 12px;
+            top: 89px;
+        }
+        .o{
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            top: 97px;
+            left: 98px;
+            background-color: #000010;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="top">
+        <h6>Welcome</h6>
+        <p>Hello</p>
+    </div> -->
+    <div id="circle">
+        <ul id="kedu"></ul>
+        <div id="second"></div>
+        <!--绘制秒针-->
+        <div id="min"></div>
+        <!--绘制分针-->
+        <div id="hour"></div>
+        <!--绘制时针-->
+        <!-- <p id="p12">12</p>
+        <p id="p3">3</p>
+        <p id="p6">6</p>
+        <p id="p9">9</p> -->
+        <div class="o">
+
+        </div>
+    </div>
+    <div class="wellcome">
+        <h2>Welcome</h2>
+    </div>
+
+
+    <div class="lxfs">
+        <h1>“</h1>
+        <h3>Hello World</h3>
+        <p>一个介绍自己的个人网页</p>
+        <br>
+        <h1>”</h1>
+    </div>
+    <div class="yf">
+        <img src="./img/衣服.png" alt="">
+        <div class="xx">
+            <ul class="to">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="cha">
+                X
+            </div>
+        </div>
+    </div>
+
+    <div class="lx">
+        <div class="top2">
+            <div class="ys qq">
+                2474872548
+                <!-- <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi.qqkou.com%2Fi%2F1a2280075355x249865971b26.jpg&refer=http%3A%2F%2Fi.qqkou.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1663772272&t=a204ba1e0f870e71eace745308324833" alt=""> -->
+            </div>
+            <div class="ys wb">
+                微博
+            </div>
+            <div class="ys dh">
+                171********
+            </div>
+            <div class="ys yx">
+                2474872548@qq.com
+            </div>
+        </div>
+       <div class="but">
+        <img src="./img/QQ.png" alt="">
+        <img src="./img/新浪微博.png" alt="">
+        <img src="./img/电话.png" alt="">
+        <img src="./img/邮箱.png" alt="">
+       </div>
+    </div>
+    <div class="border-right">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 120px; margin-top: 70px;">
+            <div class="borders top">
+                <p id="text"> 如果说我有什么贡献的话，那不是我的才能的结果，完全是勤勉的毅力的结果。——[道尔顿]</p>
+            </div>
+            <div class="borders time">
+                <p id="ymd">2022年7月2日 星期一</p>
+                <h2 id="hms">12:34</h2>
+                <p>天气 加载失败 &#176C</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 50px;">
+            <div class="borders ouer">
+                <img src="./img/HTML5.png" alt="">
+                <p>Html5</p>
+            </div>
+            <div class="borders ouer">
+                <img src="./img/js.png" alt="">
+                <p>js</p>
+            </div>
+            <div class="borders ouer">
+                <img src="./img/css.png" alt="">
+                <p>css</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 50px;">
+            <div class="borders ouer">
+                <img src="./img/bootstrap.png" alt="">
+                <p>bootstrap</p>
+            </div>
+            <div class="borders ouer">
+                <img src="./img/node.png" alt="">
+                <p>node</p>
+            </div>
+            <div class="borders ouer">
+                <img src="./img/vue.png" alt="">
+                <p>vue</p>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+
+    <script>
+        const $ = function (selector, index) {
+            // console.log(index===undefined);
+            return index === undefined ? document.querySelector(selector) : document.querySelectorAll(selector)
+        }
+
+        document.body.onselectstart = function () {
+            return false;
+        }
+   
+    </script>
+    <script src="./js/time.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

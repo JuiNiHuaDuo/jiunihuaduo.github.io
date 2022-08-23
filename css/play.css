@@ -1,0 +1,83 @@
+ul{
+    list-style: none;
+}
+#circle{
+    top: 200px;
+    left: 70px;
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50px; */
+    border: 1px solid #fdfdfd;
+    position: relative;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    color: #c38d9e;
+    float: left;
+}
+#kedu li{
+    width: 1px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #85dcb8;
+    transform-origin: center 101px;/*设置li标签的旋转中心和旋转半径。*/
+    position: absolute;
+    left: 99px;
+    top: -1px;
+}
+#kedu li:nth-of-type(5n+1){
+    height: 12px;
+    width: 2px;
+}
+
+/* 秒针的绘制，用transform把div绘制成线条，后面的指针都是在这样。 */
+#second{
+    width: 2px;
+    height: 80px;
+    background-color: #e27d60;
+    transform: scaleY(1);
+    position: absolute;
+    left: 100px;
+    top: 21px;
+    transform-origin: bottom; /*设置它们的旋转中心，transform-origin: bottom；意思是以它们的底部为中心旋转。*/
+}
+#min{
+    width: 2px;
+    height: 65px;
+    background-color: gray;
+    transform: scaleY(1);
+    position: absolute;
+    left: 100px;
+    top: 35px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 2px;
+    height: 50px;
+    background-color: #e8a87c;
+    transform: scaleY(1);
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    transform-origin: bottom;
+}
+#p12{
+    position: absolute;
+    left: 91px;
+    top: 9px;
+}
+#p3{
+    position: absolute;
+    right: 12px;
+    top: 89px;
+}
+#p6{
+    position: absolute;
+    left: 95px;
+    bottom: 9px;
+}
+#p9{
+    position: absolute;
+    left: 12px;
+    top: 89px;
+}
